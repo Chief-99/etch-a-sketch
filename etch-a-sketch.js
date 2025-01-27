@@ -1,5 +1,6 @@
 const grid = document.querySelector('#grid-container');
 
+// *Loop to create and add all the cells in the grid
 for (let i = 0; i < 16; i++) {
   let row = document.createElement('div');
   row.classList.add('row');
@@ -12,3 +13,7 @@ for (let i = 0; i < 16; i++) {
 
   grid.appendChild(row);
 }
+
+cell.addEventListener('onmouseover', (event) => {
+  event.target.backgroundColor = 'black';
+})
