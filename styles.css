@@ -1,19 +1,25 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
 #grid-container {
   width: 50rem;
   height: 50rem;
-  border: 2px solid purple;
+  /* border: 2px solid purple; */
   display: flex;
   flex-direction: column;
 }
 
 .row {
   height: 50rem / 16;
-  border: 2px solid blue;
+  /* border: 2px solid blue; */
   flex: 1;
   display: flex;
 }
 
 .cell {
-  border: 2px solid orange;
+  border: 1px solid orange;
   flex: 1;
 }
