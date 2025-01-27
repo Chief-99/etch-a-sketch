@@ -10,5 +10,5 @@
   height: 50rem / 16;
   border: 2px solid blue;
   flex: 1;
-  
+  display: flex;
 }
