@@ -12,3 +12,8 @@
   flex: 1;
   display: flex;
 }
+
+.cell {
+  border: 2px solid orange;
+  flex: 1;
+}
