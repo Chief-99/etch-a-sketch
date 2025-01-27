@@ -1,0 +1,10 @@
+#grid-container {
+  width: 50rem;
+  height: 50rem;
+  border: 2px solid purple;
+  display: flex;
+}
+
+.row {
+  height: 50rem / 16;
+}
