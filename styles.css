@@ -3,8 +3,12 @@
   height: 50rem;
   border: 2px solid purple;
   display: flex;
+  flex-direction: column;
 }
 
 .row {
   height: 50rem / 16;
+  border: 2px solid blue;
+  flex: 1;
+  
 }
