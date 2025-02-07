@@ -24,4 +24,4 @@ allCells.forEach(cell => {
 })
 
 // * Prompt to get the number of cells per side
-const cellNumberButton = document.querySelector('#cell-number');
+const cellNumberButton = document.querySelector('#grid-size');
