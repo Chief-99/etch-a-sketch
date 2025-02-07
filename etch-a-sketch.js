@@ -14,6 +14,8 @@ for (let i = 0; i < 16; i++) {
   grid.appendChild(row);
 }
 
+const allCells = document.querySelectorAll('.cell')
+
 
 
 // cell.style.backgroundColor = 'black';
