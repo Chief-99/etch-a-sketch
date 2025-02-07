@@ -7,13 +7,14 @@ function createGrid() {
   const grid = document.createElement('div');
   grid.id = 'grid-container';
   document.body.appendChild(grid);
+  squaresPerSide = 16;
 
   // * Loop to create and add all the cells in the grid
-  for (let i = 0; i < 16; i++) {
+  for (let i = 0; i < squaresPerSide; i++) {
     let row = document.createElement('div');
     row.classList.add('row');
   
-    for (let j = 0; j < 16; j++) {
+    for (let j = 0; j < squaresPerSide; j++) {
       let cell = document.createElement('div');
       cell.classList.add('cell');
       row.appendChild(cell);
