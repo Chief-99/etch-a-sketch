@@ -16,6 +16,10 @@ for (let i = 0; i < 16; i++) {
 
 const allCells = document.querySelectorAll('.cell')
 
-
+allCells.forEach(cell => {
+  cell.addEventListener('mouseover', () => {
+    
+  })
+})
 
 // cell.style.backgroundColor = 'black';
