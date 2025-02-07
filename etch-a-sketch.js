@@ -1,6 +1,6 @@
 const grid = document.querySelector('#grid-container');
 
-// *Loop to create and add all the cells in the grid
+// * Loop to create and add all the cells in the grid
 for (let i = 0; i < 16; i++) {
   let row = document.createElement('div');
   row.classList.add('row');
@@ -14,7 +14,7 @@ for (let i = 0; i < 16; i++) {
   grid.appendChild(row);
 }
 
-// *Select all the cells and make them black on hover
+// * Select all the cells and make them black on hover
 const allCells = document.querySelectorAll('.cell')
 
 allCells.forEach(cell => {
@@ -22,3 +22,6 @@ allCells.forEach(cell => {
     cell.style.backgroundColor = 'black';
   })
 })
+
+// * Prompt to get the number of cells per side
+const cellNumberButton = document.querySelector('#cell-number');
