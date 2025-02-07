@@ -30,12 +30,12 @@ cellNumberButton.addEventListener('click', () => {
   let squaresPerSide;
 
   while(true) {
-    squaresPerSide = Number(prompt('ENter the number of squares per side. Choose a number from 1-100.'));
+    squaresPerSide = Number(prompt('Enter the number of squares per side between 1 and 100.'));
 
     if (isNaN(squaresPerSide)) {
       alert('Please enter a valid number.');
     } else if (squaresPerSide < 1 || squaresPerSide > 100) {
-      alert('Please enter a number from 1-100.');
+      alert('Please enter a number between 1 and 100.');
     } else {
       break;
     }
