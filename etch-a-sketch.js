@@ -14,6 +14,6 @@ for (let i = 0; i < 16; i++) {
   grid.appendChild(row);
 }
 
-cell.addEventListener('onmouseover', (event) => {
-  event.target.backgroundColor = 'black';
-})
+
+
+// cell.style.backgroundColor = 'black';
