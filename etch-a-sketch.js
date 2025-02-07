@@ -18,8 +18,6 @@ const allCells = document.querySelectorAll('.cell')
 
 allCells.forEach(cell => {
   cell.addEventListener('mouseover', () => {
-    
+    cell.style.backgroundColor = 'black';
   })
 })
-
-// cell.style.backgroundColor = 'black';
