@@ -25,3 +25,8 @@ allCells.forEach(cell => {
 
 // * Prompt to get the number of cells per side
 const cellNumberButton = document.querySelector('#grid-size');
+
+cellNumberButton.addEventListener('click', () => {
+  let squaresPerSide = prompt('Enter the number of squares per side between from 1-100', );
+  
+})
