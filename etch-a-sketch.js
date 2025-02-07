@@ -23,18 +23,18 @@ function createGrid() {
   
     grid.appendChild(row);
   }
-}
-createGrid();
 
-
-// * Select all the cells and make them black on hover
-const allCells = document.querySelectorAll('.cell')
-
-allCells.forEach(cell => {
-  cell.addEventListener('mouseover', () => {
-    cell.style.backgroundColor = 'black';
+  // * Select all the cells and make them black on hover
+  const allCells = document.querySelectorAll('.cell')
+  
+  allCells.forEach(cell => {
+    cell.addEventListener('mouseover', () => {
+      cell.style.backgroundColor = 'black';
+    })
   })
-})
+}
+
+createGrid();
 
 // * Prompt to get the number of cells per side
 const cellNumberButton = document.querySelector('#grid-size');
