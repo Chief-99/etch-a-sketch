@@ -28,8 +28,14 @@ const cellNumberButton = document.querySelector('#grid-size');
 
 cellNumberButton.addEventListener('click', () => {
   let squaresPerSide;
-  
-  while (true) {
-    squaresPerSide = prompt('Enter the number of squares per side between from 1-100', );
+
+  while(true) {
+    squaresPerSide = Number(prompt('ENter the number of squares per side. Choose a number from 1-100.'));
+
+    if (!isNaN(squaresPerSide)) {
+      break;
+    }
+
+    alert('Please enter a valid number.');
   }
 })
