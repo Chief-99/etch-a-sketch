@@ -1,3 +1,5 @@
+let squaresPerSide = 16;
+
 function createGrid() {
   const existingGrid = document.getElementById('grid-container');
   if (existingGrid) {
@@ -7,7 +9,6 @@ function createGrid() {
   const grid = document.createElement('div');
   grid.id = 'grid-container';
   document.body.appendChild(grid);
-  squaresPerSide = 16;
 
   // * Loop to create and add all the cells in the grid
   for (let i = 0; i < squaresPerSide; i++) {
@@ -39,8 +40,6 @@ allCells.forEach(cell => {
 const cellNumberButton = document.querySelector('#grid-size');
 
 cellNumberButton.addEventListener('click', () => {
-  let squaresPerSide;
-
   while(true) {
     squaresPerSide = Number(prompt('Enter the number of squares per side between 1 and 100.'));
 
@@ -52,4 +51,6 @@ cellNumberButton.addEventListener('click', () => {
       break;
     }
   }
+
+  createGrid();
 })
