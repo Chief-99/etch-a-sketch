@@ -1,6 +1,15 @@
-const grid = document.createElement('div');
-grid.id = 'grid-container';
-document.body.appendChild(grid);
+function createGrid() {
+  const existingGrid = document.getElementById('grid-container');
+  if (existingGrid) {
+    document.body.removeChild(existingGrid);
+  }
+
+  const grid = document.createElement('div');
+  grid.id = 'grid-container';
+  document.body.appendChild(grid);
+
+
+}
 
 // // * Loop to create and add all the cells in the grid
 // for (let i = 0; i < 16; i++) {
