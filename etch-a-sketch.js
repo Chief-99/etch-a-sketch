@@ -14,6 +14,7 @@ for (let i = 0; i < 16; i++) {
   grid.appendChild(row);
 }
 
+// *Select all the cells and make them black on hover
 const allCells = document.querySelectorAll('.cell')
 
 allCells.forEach(cell => {
