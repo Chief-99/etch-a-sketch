@@ -39,6 +39,7 @@ cellNumberButton.addEventListener('click', () => {
     } else {
       break;
     }
-
   }
 })
+
+createGrid();
