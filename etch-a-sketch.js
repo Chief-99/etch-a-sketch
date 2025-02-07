@@ -1,18 +1,20 @@
-const grid = document.querySelector('#grid-container');
+const grid = document.createElement('div');
+grid.id = 'grid-container';
+document.body.appendChild(grid);
 
-// * Loop to create and add all the cells in the grid
-for (let i = 0; i < 16; i++) {
-  let row = document.createElement('div');
-  row.classList.add('row');
+// // * Loop to create and add all the cells in the grid
+// for (let i = 0; i < 16; i++) {
+//   let row = document.createElement('div');
+//   row.classList.add('row');
 
-  for (let j = 0; j < 16; j++) {
-    let cell = document.createElement('div');
-    cell.classList.add('cell');
-    row.appendChild(cell);
-  }
+//   for (let j = 0; j < 16; j++) {
+//     let cell = document.createElement('div');
+//     cell.classList.add('cell');
+//     row.appendChild(cell);
+//   }
 
-  grid.appendChild(row);
-}
+//   grid.appendChild(row);
+// }
 
 // * Select all the cells and make them black on hover
 const allCells = document.querySelectorAll('.cell')
