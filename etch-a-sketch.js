@@ -25,13 +25,23 @@ function createGrid() {
   }
 
   // * Select all the cells and make them black on hover
-  const allCells = document.querySelectorAll('.cell')
-  
-  allCells.forEach(cell => {
-    cell.addEventListener('mouseover', () => {
-      cell.style.backgroundColor = randomColour();
+  const allCells = document.querySelectorAll('.cell');
+
+  function generateRandomColour() {
+    allCells.forEach(cell => {
+      cell.addEventListener('mouseover', () => {
+        cell.style.backgroundColor = randomColour();
+      })
     })
-  })
+  }
+
+  function blackSquares() {
+    allCells.forEach(cell => {
+      cell.addEventListener('mouseover', () => {
+        cell.style.backgroundColor = 'black';
+      })
+    })
+  }
 }
 
 createGrid();
