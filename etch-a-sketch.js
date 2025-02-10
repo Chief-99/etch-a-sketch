@@ -29,7 +29,7 @@ function createGrid() {
   
   allCells.forEach(cell => {
     cell.addEventListener('mouseover', () => {
-      cell.style.backgroundColor = 'black';
+      cell.style.backgroundColor = randomColour();
     })
   })
 }
@@ -37,14 +37,12 @@ function createGrid() {
 createGrid();
 
 // * Generate a random colour
-let number;
-
-function generateRandomNumber() {
-  randomNumber = Math.floor(Math.random() * 256);
-  return randomNumber;
-}
-
-let randomColour = `rgb(${randomNumber}, ${randomNumber}, ${randomNumber})`
+const randomColour = () => {
+  let red = Math.floor(Math.random() * 256);
+  let green = Math.floor(Math.random() * 256);
+  let blue = Math.floor(Math.random() * 256);
+  return `rgb(${red}, ${green}, ${blue})`
+};
 
 // * Prompt to get the number of cells per side
 const cellNumberButton = document.querySelector('#grid-size');
