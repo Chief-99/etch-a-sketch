@@ -39,7 +39,8 @@ createGrid();
 // * Function to generate a random number
 let number;  
 function generateRandomNumber() {
-  
+  number = Math.floor(Math.random() * 256);
+  return number;
 }
 
 // * Prompt to get the number of cells per side
