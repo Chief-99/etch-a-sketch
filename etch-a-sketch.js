@@ -36,12 +36,15 @@ function createGrid() {
 
 createGrid();
 
-// * Function to generate a random number
-let number;  
+// * Generate a random colour
+let number;
+
 function generateRandomNumber() {
-  number = Math.floor(Math.random() * 256);
-  return number;
+  randomNumber = Math.floor(Math.random() * 256);
+  return randomNumber;
 }
+
+let randomColour = `rgb(${randomNumber}, ${randomNumber}, ${randomNumber})`
 
 // * Prompt to get the number of cells per side
 const cellNumberButton = document.querySelector('#grid-size');
