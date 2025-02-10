@@ -36,7 +36,8 @@ function createGrid() {
 
 createGrid();
 
-// * Function to generate a random number  
+// * Function to generate a random number
+let number;  
 function generateRandomNumber() {
   
 }
