@@ -36,6 +36,11 @@ function createGrid() {
 
 createGrid();
 
+// * Function to generate a random number  
+function generateRandomNumber() {
+  
+}
+
 // * Prompt to get the number of cells per side
 const cellNumberButton = document.querySelector('#grid-size');
 
