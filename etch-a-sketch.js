@@ -46,10 +46,6 @@ function createGrid() {
   blackSquares();
 }
 
-const randomColourButton = document.querySelector('#random-colour');
-const blackColourButton = document.querySelector('#black-colour');
-
-
 createGrid();
 
 // * Generate a random colour
