@@ -10,7 +10,7 @@ function createGrid() {
   grid.id = 'grid-container';
   document.body.appendChild(grid);
 
-  // * Loop to create and add all the cells in the grid
+  // Loop to create and add all the cells in the grid
   for (let i = 0; i < squaresPerSide; i++) {
     let row = document.createElement('div');
     row.classList.add('row');
@@ -27,11 +27,11 @@ function createGrid() {
   cellEventListeners();
 }
 
-// * Buttons to change the colour of the squares
+// Buttons to change the colour of the squares
 const randomButton = document.getElementById('random-colour');
 const blackButton = document.getElementById('black-colour');
 
-// * Generate a random colour
+// Generate a random colour
 const randomColour = () => {
   let red = Math.floor(Math.random() * 256);
   let green = Math.floor(Math.random() * 256);
@@ -39,7 +39,7 @@ const randomColour = () => {
   return `rgb(${red}, ${green}, ${blue})`
 };
 
-// * Function to clear the cells
+// Function to clear the cells
 function clearCells(event) {
   const allCells = document.querySelectorAll('.cell');  
   allCells.forEach(cell => {
@@ -47,7 +47,17 @@ function clearCells(event) {
   });
 }
 
-// * Function to handle cell hover 
+// Function to progressively raise the opacity
+function raiseOpacity() {
+  for (let i = 1; i <= 10; i++) {
+    const allCells = document.querySelectorAll('.cell');
+    allCells.forEach(cell => {
+      cell.style.opacity = `${i * 10}%`;
+    })
+  }
+}
+
+// Function to handle cell hover 
 let currentColour = 'black';
 
 function handleCellHover(event) {
@@ -58,7 +68,7 @@ function handleCellHover(event) {
   }
 }
 
-// * Add event listeners to the cells
+// Add event listeners to the cells
 function cellEventListeners() {
   const allCells = document.querySelectorAll('.cell');  
   allCells.forEach(cell => {
@@ -66,7 +76,7 @@ function cellEventListeners() {
   });
 }
 
-// * Add event listeners to the buttons
+// Add event listeners to the buttons
 randomButton.addEventListener('click', () => {
   currentColour = 'random';
   clearCells();
@@ -75,9 +85,10 @@ randomButton.addEventListener('click', () => {
 blackButton.addEventListener('click', () => {
   currentColour = 'black';
   clearCells();
+  raiseOpacity();
 })
 
-// * Prompt to get the number of cells per side
+// Prompt to get the number of cells per side
 const cellNumberButton = document.querySelector('#grid-size');
 
 cellNumberButton.addEventListener('click', () => {
