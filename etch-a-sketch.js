@@ -41,7 +41,10 @@ const randomColour = () => {
 
 // * Function to clear the cells
 function clearCells(event) {
-  event.target.style.backgroundColor = 'white';
+  const allCells = document.querySelectorAll('.cell');  
+  allCells.forEach(cell => {
+    cell.style.backgroundColor = '';
+  });
 }
 
 // * Function to handle cell hover 
@@ -66,11 +69,12 @@ function cellEventListeners() {
 // * Add event listeners to the buttons
 randomButton.addEventListener('click', () => {
   currentColour = 'random';
-  
+  clearCells();
 });
 
 blackButton.addEventListener('click', () => {
   currentColour = 'black';
+  clearCells();
 })
 
 // * Prompt to get the number of cells per side
