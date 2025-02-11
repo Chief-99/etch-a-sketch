@@ -24,29 +24,22 @@ function createGrid() {
     grid.appendChild(row);
   }
 
-  // * Select all the cells and make them black on hover
-  const allCells = document.querySelectorAll('.cell');
-
-  function generateRandomColour() {
-    allCells.forEach(cell => {
-      cell.addEventListener('mouseover', () => {
-        cell.style.backgroundColor = randomColour();
-      })
-    })
-  }
-
-  function blackSquares() {
-    allCells.forEach(cell => {
-      cell.addEventListener('mouseover', () => {
-        cell.style.backgroundColor = 'black';
-      })
-    })
-  }
-
   blackSquares();
 }
 
-createGrid();
+// * Select all the cells 
+const allCells = document.querySelectorAll('.cell');  
+
+// * Buttons to change the colour of the squares
+const randomButton = document.getElementById('black-colour');
+const blackButton = document.getElementById('random-colour');
+
+let currentColour = 'black';
+
+// Function to handle cell hover 
+function handleCellHover(event) {
+  
+}
 
 // * Generate a random colour
 const randomColour = () => {
@@ -75,7 +68,5 @@ cellNumberButton.addEventListener('click', () => {
   createGrid();
 })
 
-// * Buttons to change the colour of the squares
-const randomButton = document.getElementById('black-colour');
-const blackButton = document.getElementById('random-colour');
 
+createGrid();
