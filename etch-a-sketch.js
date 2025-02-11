@@ -23,14 +23,16 @@ function createGrid() {
   
     grid.appendChild(row);
   }
+
+  cellEventListeners();
 }
 
 // * Select all the cells 
 const allCells = document.querySelectorAll('.cell');  
 
 // * Buttons to change the colour of the squares
-const randomButton = document.getElementById('black-colour');
-const blackButton = document.getElementById('random-colour');
+const randomButton = document.getElementById('random-colour');
+const blackButton = document.getElementById('black-colour');
 
 // * Generate a random colour
 const randomColour = () => {
@@ -59,6 +61,14 @@ function cellEventListeners() {
   });
 }
 
+// * Add event listeners to the buttons
+randomButton.addEventListener('click', () => {
+  currentColour = 'random';
+});
+
+blackButton.addEventListener('click', () => {
+  currentColour = 'black';
+})
 
 // * Prompt to get the number of cells per side
 const cellNumberButton = document.querySelector('#grid-size');
@@ -81,3 +91,4 @@ cellNumberButton.addEventListener('click', () => {
 
 
 createGrid();
+cellEventListeners();
