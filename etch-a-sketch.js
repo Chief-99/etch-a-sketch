@@ -74,3 +74,8 @@ cellNumberButton.addEventListener('click', () => {
 
   createGrid();
 })
+
+// * Buttons to change the colour of the squares
+const randomButton = document.getElementById('black-colour');
+const blackButton = document.getElementById('random-colour');
+
