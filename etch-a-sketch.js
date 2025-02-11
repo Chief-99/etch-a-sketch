@@ -23,8 +23,6 @@ function createGrid() {
   
     grid.appendChild(row);
   }
-
-  blackSquares();
 }
 
 // * Select all the cells 
@@ -52,6 +50,13 @@ function handleCellHover(event) {
   } else if (currentColour === 'black') {
     event.target.style.backgroundColor = 'black';
   }
+}
+
+// * Add event listeners to the cells
+function cellEventListeners() {
+  allCells.forEach(cell => {
+    cell.addEventListener('mouseover', handleCellHover);
+  });
 }
 
 
