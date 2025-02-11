@@ -27,9 +27,6 @@ function createGrid() {
   cellEventListeners();
 }
 
-// * Select all the cells 
-const allCells = document.querySelectorAll('.cell');  
-
 // * Buttons to change the colour of the squares
 const randomButton = document.getElementById('random-colour');
 const blackButton = document.getElementById('black-colour');
@@ -43,7 +40,7 @@ const randomColour = () => {
 };
 
 
-// Function to handle cell hover 
+// * Function to handle cell hover 
 let currentColour = 'black';
 
 function handleCellHover(event) {
@@ -56,6 +53,7 @@ function handleCellHover(event) {
 
 // * Add event listeners to the cells
 function cellEventListeners() {
+  const allCells = document.querySelectorAll('.cell');  
   allCells.forEach(cell => {
     cell.addEventListener('mouseover', handleCellHover);
   });
