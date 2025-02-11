@@ -39,6 +39,10 @@ const randomColour = () => {
   return `rgb(${red}, ${green}, ${blue})`
 };
 
+// * Function to clear the cells
+function clearCells(event) {
+  event.target.style.backgroundColor = 'white';
+}
 
 // * Function to handle cell hover 
 let currentColour = 'black';
@@ -62,6 +66,7 @@ function cellEventListeners() {
 // * Add event listeners to the buttons
 randomButton.addEventListener('click', () => {
   currentColour = 'random';
+  
 });
 
 blackButton.addEventListener('click', () => {
