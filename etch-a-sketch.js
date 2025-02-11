@@ -34,13 +34,6 @@ const allCells = document.querySelectorAll('.cell');
 const randomButton = document.getElementById('black-colour');
 const blackButton = document.getElementById('random-colour');
 
-let currentColour = 'black';
-
-// Function to handle cell hover 
-function handleCellHover(event) {
-  
-}
-
 // * Generate a random colour
 const randomColour = () => {
   let red = Math.floor(Math.random() * 256);
@@ -48,6 +41,19 @@ const randomColour = () => {
   let blue = Math.floor(Math.random() * 256);
   return `rgb(${red}, ${green}, ${blue})`
 };
+
+
+// Function to handle cell hover 
+let currentColour = 'black';
+
+function handleCellHover(event) {
+  if (currentColour === 'random') {
+    event.target.style.backgroundColor = randomColour();
+  } else if (currentColour === 'black') {
+    event.target.style.backgroundColor = 'black';
+  }
+}
+
 
 // * Prompt to get the number of cells per side
 const cellNumberButton = document.querySelector('#grid-size');
