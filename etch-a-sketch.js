@@ -65,15 +65,18 @@ function handleCellHover(event) {
     event.target.style.backgroundColor = randomColour();
   } else if (currentColour === 'black') {
     event.target.style.backgroundColor = 'black';
-    
+    event.target.style.background = `rgba(0, 0, 0, ${opacity})`
   }
+
+  let cell = event.target;
+  
 }
 
 // Add event listeners to the cells
 function cellEventListeners() {
   const allCells = document.querySelectorAll('.cell');  
   allCells.forEach(cell => {
-    cell.addEventListener('mouseover', handleCellHover);
+    cell.addEventListener('mouseover', handleCellHover); 
   });
 }
 
@@ -83,12 +86,9 @@ randomButton.addEventListener('click', () => {
   clearCells();
 });
 
-let initialOpacity;
-
 blackButton.addEventListener('click', () => {
   currentColour = 'black';
   clearCells();
-  initialOpacity = 0;
 })
 
 // Prompt to get the number of cells per side
