@@ -18,13 +18,14 @@ function createGrid() {
     for (let j = 0; j < squaresPerSide; j++) {
       let cell = document.createElement('div');
       cell.classList.add('cell');
+      cell.style.opacity = '0';
       row.appendChild(cell);
     }
   
     grid.appendChild(row);
   }
 
-  cellEventListeners();
+  cellEventListeners(); // Add event listeners after the grid is created
 }
 
 // Buttons to change the colour of the squares
@@ -44,32 +45,25 @@ function clearCells(event) {
   const allCells = document.querySelectorAll('.cell');  
   allCells.forEach(cell => {
     cell.style.backgroundColor = '';
+    cell.style.opacity = '0';
   });
 }
-
-// // Function to progressively raise the opacity
-// function raiseOpacity() {
-//   for (let i = 1; i <= 10; i++) {
-//     const allCells = document.querySelectorAll('.cell');
-//     allCells.forEach(cell => {
-//       cell.style.opacity = `${i * 10}%`;
-//     })
-//   }
-// }
 
 // Function to handle cell hover 
 let currentColour = 'black';
 
 function handleCellHover(event) {
+  let cell = event.target;
+  let currentOpacity = parseFloat(cell.style.opacity) || 0;
+
   if (currentColour === 'random') {
     event.target.style.backgroundColor = randomColour();
   } else if (currentColour === 'black') {
     event.target.style.backgroundColor = 'black';
-    event.target.style.background = `rgba(0, 0, 0, ${opacity})`
+    if (currentOpacity < 1) {
+      cell.style.opacity = (currentOpacity + 0.1).toFixed(1);
+    }
   }
-
-  let cell = event.target;
-  
 }
 
 // Add event listeners to the cells
@@ -112,4 +106,3 @@ cellNumberButton.addEventListener('click', () => {
 
 
 createGrid();
-cellEventListeners();
