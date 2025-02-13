@@ -58,6 +58,7 @@ function handleCellHover(event) {
 
   if (currentColour === 'random') {
     event.target.style.backgroundColor = randomColour();
+    cell.style.opacity = '1';
   } else if (currentColour === 'black') {
     event.target.style.backgroundColor = 'black';
     if (currentOpacity < 1) {
