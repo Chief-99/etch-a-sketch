@@ -47,15 +47,15 @@ function clearCells(event) {
   });
 }
 
-// Function to progressively raise the opacity
-function raiseOpacity() {
-  for (let i = 1; i <= 10; i++) {
-    const allCells = document.querySelectorAll('.cell');
-    allCells.forEach(cell => {
-      cell.style.opacity = `${i * 10}%`;
-    })
-  }
-}
+// // Function to progressively raise the opacity
+// function raiseOpacity() {
+//   for (let i = 1; i <= 10; i++) {
+//     const allCells = document.querySelectorAll('.cell');
+//     allCells.forEach(cell => {
+//       cell.style.opacity = `${i * 10}%`;
+//     })
+//   }
+// }
 
 // Function to handle cell hover 
 let currentColour = 'black';
@@ -65,6 +65,7 @@ function handleCellHover(event) {
     event.target.style.backgroundColor = randomColour();
   } else if (currentColour === 'black') {
     event.target.style.backgroundColor = 'black';
+     
   }
 }
 
@@ -85,7 +86,7 @@ randomButton.addEventListener('click', () => {
 blackButton.addEventListener('click', () => {
   currentColour = 'black';
   clearCells();
-  raiseOpacity();
+  let initialOpacity = 0;
 })
 
 // Prompt to get the number of cells per side
