@@ -65,7 +65,7 @@ function handleCellHover(event) {
     event.target.style.backgroundColor = randomColour();
   } else if (currentColour === 'black') {
     event.target.style.backgroundColor = 'black';
-     
+    
   }
 }
 
@@ -83,10 +83,12 @@ randomButton.addEventListener('click', () => {
   clearCells();
 });
 
+let initialOpacity;
+
 blackButton.addEventListener('click', () => {
   currentColour = 'black';
   clearCells();
-  let initialOpacity = 0;
+  initialOpacity = 0;
 })
 
 // Prompt to get the number of cells per side
