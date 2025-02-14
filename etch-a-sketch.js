@@ -18,7 +18,7 @@ function createGrid() {
     for (let j = 0; j < squaresPerSide; j++) {
       let cell = document.createElement('div');
       cell.classList.add('cell');
-      cell.style.opacity = '0';
+      cell.style.background = 'rgba(255, 255, 255, 0)';
       row.appendChild(cell);
     }
   
@@ -45,7 +45,7 @@ function clearCells(event) {
   const allCells = document.querySelectorAll('.cell');  
   allCells.forEach(cell => {
     cell.style.backgroundColor = '';
-    cell.style.opacity = '0';
+    cell.style.background = 'rgba(255, 255, 255, 0)';
   });
 }
 
