@@ -53,8 +53,7 @@ let currentColour = 'black';
 
 function handleCellHover(event) {
   let cell = event.target;
-  let currentOpacity = parseFloat(cell.style.background.split(',')[3]) || 0;
-  console.log(currentOpacity)
+  let currentOpacity = parseFloat(cell.style.background.split(',')[3]);
 
   if (currentColour === 'random') {
     event.target.style.backgroundColor = randomColour();
