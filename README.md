@@ -5,9 +5,8 @@ This is a fun and interactive web project that simulates the classic Etch-A-Sket
 ## Features
 - Draw with your mouse. 
 - Grid size customisation.
-- Reset the grid to start fresh. 
-- Choose between black, rainbow or custom colours for your drawings.
-- Easily erase parts of your sketch.
+- Choose between black or random colours for your drawings.
+- Toggle the ability to add shading to your drawings.
 
 ## Technologies used
 - HTML
