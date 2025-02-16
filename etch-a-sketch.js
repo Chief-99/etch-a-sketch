@@ -71,9 +71,10 @@ function handleCellHover(event) {
 
 // Function to increase opacity 
 let isActive = false; 
-const toggleOpacityButton = document.querySelector('#toggle-shading');
+const toggleShadingButton = document.querySelector('#toggle-shading');
 
-toggleOpacityButton.addEventListener('click', () => {
+
+toggleShadingButton.addEventListener('click', () => {
   isActive = !isActive; // Toggle the isActive flag
 })
 
