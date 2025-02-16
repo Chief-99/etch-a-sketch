@@ -73,11 +73,13 @@ function handleCellHover(event) {
 let isActive = false; 
 const toggleShadingButton = document.querySelector('#toggle-shading');
 const shadingCheckbox = document.querySelector('#shading-checkbox');
-
+shadingCheckbox.checked = false;
 
 toggleShadingButton.addEventListener('click', () => {
   isActive = !isActive; // Toggle the isActive flag
 })
+
+
 
 // Add event listeners to the cells
 function cellEventListeners() {
