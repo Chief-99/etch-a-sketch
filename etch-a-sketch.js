@@ -53,7 +53,6 @@ let currentColour = 'black';
 
 function handleCellHover(event) {
   let cell = event.target;
-  let currentOpacity = parseFloat(cell.style.background.split(',')[3]);
 
   if (currentColour === 'random') {
     cell.style.backgroundColor = randomColour();
@@ -61,7 +60,7 @@ function handleCellHover(event) {
   } else if (currentColour === 'black') {
     event.target.style.backgroundColor = 'black';
     
-    if (isActive = true) {
+    if (isActive) {
       increaseOpacity(event);
     }
   }
@@ -76,6 +75,8 @@ toggleOpacityButton.addEventListener('click', () => {
 })
 
 function increaseOpacity(event) {
+  let currentOpacity = parseFloat(event.target.style.background.split(',')[3]);
+
   if (currentOpacity < 1) {
     event.target.style.background = `rgba(0, 0, 0, ${(currentOpacity + 0.1).toFixed(1)})`;
   }
