@@ -70,13 +70,14 @@ function handleCellHover(event) {
 }
 
 // Function to increase opacity 
-let isActive = false; 
 const toggleShadingButton = document.querySelector('#toggle-shading');
 const shadingCheckbox = document.querySelector('#shading-checkbox');
+let isActive = false; 
 shadingCheckbox.checked = false;
 
 toggleShadingButton.addEventListener('click', () => {
   isActive = !isActive; // Toggle the isActive flag
+  shadingCheckbox.checked = !shadingCheckbox.checked;
 })
 
 
