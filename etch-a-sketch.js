@@ -48,7 +48,7 @@ function clearCells(event) {
   });
 }
 
-// Function to handle cell hover 
+// Function to handle colour changes on cell hover 
 let currentColour = 'black';
 
 function handleCellHover(event) {
@@ -65,6 +65,9 @@ function handleCellHover(event) {
     }
   }
 }
+
+// Function to increase opacity 
+let isActive = false; 
 
 // Add event listeners to the cells
 function cellEventListeners() {
