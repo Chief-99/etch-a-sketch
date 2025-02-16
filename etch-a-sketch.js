@@ -69,6 +69,8 @@ function handleCellHover(event) {
 // Function to increase opacity 
 let isActive = false; 
 
+const toggleOpacityButton = document.querySelector('#toggle-opacity');
+
 // Add event listeners to the cells
 function cellEventListeners() {
   const allCells = document.querySelectorAll('.cell');  
