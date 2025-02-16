@@ -74,6 +74,12 @@ toggleOpacityButton.addEventListener('click', () => {
   isActive = !isActive;
 })
 
+function increaseOpacity(event) {
+  if (currentOpacity < 1) {
+    event.style.background = `rgba(0, 0, 0, ${(currentOpacity + 0.1).toFixed(1)})`;
+  }
+}
+
 // Add event listeners to the cells
 function cellEventListeners() {
   const allCells = document.querySelectorAll('.cell');  
