@@ -53,15 +53,18 @@ let currentColour = 'black';
 
 function handleCellHover(event) {
   let cell = event.target;
+  let currentOpacity = parseFloat(cell.style.background.split(',')[3]);
 
   if (currentColour === 'random') {
-    cell.style.backgroundColor = randomColour();
+    event.target.style.backgroundColor = randomColour();
     cell.style.opacity = '1';
   } else if (currentColour === 'black') {
     event.target.style.backgroundColor = 'black';
-    
+
     if (isActive) {
-      increaseOpacity(event);
+      if (currentOpacity < 1) {
+        cell.style.background = `rgba(0, 0, 0, ${(currentOpacity + 0.1).toFixed(1)})`;
+      }
     }
   }
 }
@@ -73,14 +76,6 @@ const toggleOpacityButton = document.querySelector('#toggle-opacity');
 toggleOpacityButton.addEventListener('click', () => {
   isActive = !isActive; // Toggle the isActive flag
 })
-
-function increaseOpacity(event) {
-  let currentOpacity = parseFloat(event.target.style.background.split(',')[3]);
-
-  if (currentOpacity < 1) {
-    event.target.style.background = `rgba(0, 0, 0, ${(currentOpacity + 0.1).toFixed(1)})`;
-  }
-}
 
 // Add event listeners to the cells
 function cellEventListeners() {
