@@ -78,6 +78,10 @@ select {
   --blue-400: #5299d3;
   --blue-100: #aecfea;
   --gold-500: #efcb68;
+
+  --fs-900: 4rem;
+  --fs-700: 1.875rem;
+  --fs-600: 1.5rem;
 }
 
 #grid-container {
