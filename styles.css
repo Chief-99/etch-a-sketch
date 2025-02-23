@@ -73,6 +73,13 @@ select {
   }
 }
 
+:root {
+  --blue-800: #001658;
+  --blue-400: #5299d3;
+  --blue-100: #aecfea;
+  --gold-500: #efcb68;
+}
+
 #grid-container {
   max-width: 50rem;
   height: 50rem;
