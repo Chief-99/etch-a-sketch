@@ -7,8 +7,10 @@ function createGrid() {
   }
 
   const grid = document.createElement('div');
+  const gridPlaceholder = document.getElementById('grid-placeholder');
   grid.id = 'grid-container';
-  document.body.appendChild(grid);
+  gridPlaceholder.appendChild(grid);
+
 
   // Loop to create and add all the cells in the grid
   for (let i = 0; i < squaresPerSide; i++) {
