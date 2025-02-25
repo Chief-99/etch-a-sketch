@@ -85,8 +85,18 @@ select {
   
 }
 
+* {
+  font-family: 'Inter';
+  font-weight: bolder;
+}
+
 body {
   background-color: var(--blue-100);
+}
+
+.heading-container {
+  text-align: center;
+  padding: 2rem;
 }
 
 #grid-container {
