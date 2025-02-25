@@ -102,7 +102,7 @@ blackButton.addEventListener('click', () => {
 })
 
 // Prompt to get the number of cells per side
-const cellNumberButton = document.querySelector('#grid-size');
+const cellNumberButton = document.querySelector('#grid-size-button');
 
 cellNumberButton.addEventListener('click', () => {
   while(true) {
