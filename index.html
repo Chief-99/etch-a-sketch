@@ -9,12 +9,34 @@
   <script src="etch-a-sketch.js" defer></script>
 </head>
 <body>
-  <button id="grid-size">Choose number of cells</button>
-  <button id="random-colour">Random colours</button>
-  <button id="black-colour">Black squares</button>
-  <button id="toggle-shading">Toggle shading</button>
-  <input type="checkbox" name="shading" id="shading-checkbox" disabled value="1">
-  <label for="shading">Shading</label>
+  <div class="heading-container">
+    <h1 id="heading">PIXEL SKETCH</h1>
+  </div>
+
+  <div class="body-container">
+    <div class="left-functions-container">
+      <div class="grid-size-container">
+        <p class="grid-size-label">Change the grid size:</p>
+        <button id="grid-size-button">Choose number of cells</button>
+        <p class="current-grid-size">16 x 16</p>
+      </div>
+
+      <div class="colour-container">
+        <p class="colour-label">Select drawing colour:</p>
+        <button id="black-colour">Black squares</button>
+        <button id="random-colour">Random colours</button>
+      </div>
+    </div>
+
+    <div class="grid-placeholder"></div>
+
+    <div class="right-section">
+      <button id="toggle-shading">Toggle shading</button>
+      <input type="checkbox" name="shading" id="shading-checkbox" disabled value="1">
+      <label for="shading">Shading</label>
+    </div>
+  </div>
+
     
   </div>
 </body>
