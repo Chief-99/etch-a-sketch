@@ -85,6 +85,10 @@ select {
   
 }
 
+body {
+  background-color: var(--blue-100);
+}
+
 #grid-container {
   max-width: 50rem;
   height: 50rem;
