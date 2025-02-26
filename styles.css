@@ -109,7 +109,14 @@ body {
   border: var(--blue-800) solid 0.625rem;
 }
 
+.body-container {
+  display: flex;
+  justify-content: center;
+  gap: 10rem;
+}
+
 #grid-container {
+  width: 50rem;
   max-width: 50rem;
   height: 50rem;
   border: 1px solid black;
@@ -118,8 +125,8 @@ body {
 }
 
 .row {
-  flex: 1;
   display: flex;
+  flex: 1;
 }
 
 .cell {
