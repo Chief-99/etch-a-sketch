@@ -124,6 +124,14 @@ body {
   flex-direction: column;
 }
 
+.left-section, 
+.right-section {
+  width: 20rem;
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+}
+
 .row {
   display: flex;
   flex: 1;
