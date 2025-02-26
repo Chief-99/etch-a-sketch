@@ -1,13 +1,13 @@
 let squaresPerSide = 16;
 
 function createGrid() {
+  const gridPlaceholder = document.getElementById('grid-placeholder');
   const existingGrid = document.getElementById('grid-container');
   if (existingGrid) {
-    document.body.removeChild(existingGrid);
+    gridPlaceholder.removeChild(existingGrid);
   }
 
   const grid = document.createElement('div');
-  const gridPlaceholder = document.getElementById('grid-placeholder');
   grid.id = 'grid-container';
   gridPlaceholder.appendChild(grid);
 
