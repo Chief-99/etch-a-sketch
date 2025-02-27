@@ -77,6 +77,8 @@ select {
   --blue-800: #001658;
   --blue-400: #5299d3;
   --blue-100: #aecfea;
+  --hover-blue: #0065B8;
+  --active-blue: #3C44DC;
   --gold-500: #efcb68;
 
   --fs-900: 4rem;
@@ -156,8 +158,16 @@ button {
   line-height: 1.2;
   border-radius: 0.75rem;
   padding: 1rem;
-  box-shadow: 8px 8px var(--blue-800);
+  box-shadow: 0.5rem 0.5rem var(--blue-800);
   cursor: pointer;
+  transition: 150ms;
+}
+
+button:hover {
+  background-color: var(--hover-blue);
+  translate: 0.25rem 0.25rem;
+  box-shadow: 0.25rem 0.25rem var(--blue-800);
+
 }
 
 p, label {
