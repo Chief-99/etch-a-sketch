@@ -137,6 +137,15 @@ body {
   gap: 4rem;
 }
 
+.right-section, 
+.grid-size-container,
+.colour-container {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  gap: 1rem;
+}
+
 button {
   margin-bottom: 1rem; /* ^ remember to remove this */
   color: var(--gold-500);
