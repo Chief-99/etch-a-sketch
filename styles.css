@@ -160,14 +160,18 @@ button {
   padding: 1rem;
   box-shadow: 0.5rem 0.5rem var(--blue-800);
   cursor: pointer;
-  transition: 150ms;
+  transition: translate 50ms, box-shadow 50ms, background-color 150ms;
 }
 
 button:hover {
   background-color: var(--hover-blue);
+  
+}
+
+button:active {
+  background-color: var(--active-blue);
   translate: 0.25rem 0.25rem;
   box-shadow: 0.25rem 0.25rem var(--blue-800);
-
 }
 
 p, label {
