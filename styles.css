@@ -175,8 +175,8 @@ button:hover {
 
 button:active {
   background-color: var(--active-blue);
-  translate: 0.25rem 0.25rem;
-  box-shadow: 0.25rem 0.25rem var(--blue-800);
+  translate: 0.5rem 0.5rem;
+  box-shadow: none;
 }
 
 p, label {
