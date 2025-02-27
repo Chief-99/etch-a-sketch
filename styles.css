@@ -157,6 +157,7 @@ button {
   border-radius: 0.75rem;
   padding: 1rem;
   box-shadow: 8px 8px var(--blue-800);
+  cursor: pointer;
 }
 
 p, label {
