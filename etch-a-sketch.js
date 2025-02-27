@@ -27,6 +27,9 @@ function createGrid() {
     grid.appendChild(row);
   }
 
+  const currentGridSize = document.body.querySelector('.current-grid-size');
+  currentGridSize.textContent = `${squaresPerSide} x ${squaresPerSide}`;
+
   cellEventListeners(); // Add event listeners after the grid is created
 }
 
