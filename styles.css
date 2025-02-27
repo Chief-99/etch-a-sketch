@@ -121,6 +121,11 @@ body {
   gap: 10rem;
 }
 
+#grid-placeholder {
+  border: var(--blue-800) solid 1.5rem;
+  border-radius: 1rem;
+}
+
 #grid-container {
   width: 45rem;
   max-width: 45rem;
