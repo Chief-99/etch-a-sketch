@@ -155,6 +155,12 @@ p, label {
   font-size: 1.5rem;
 }
 
+.current-grid-size {
+  font-size: 4rem;
+  color: var(--gold-500);
+  -webkit-text-stroke: black 2px;
+}
+
 .row {
   display: flex;
   flex: 1;
