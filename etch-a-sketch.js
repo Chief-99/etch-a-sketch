@@ -109,9 +109,15 @@ blackButton.addEventListener('click', () => {
 // Prompt to get the number of cells per side
 const cellNumberButton = document.querySelector('#grid-size-button');
 
-cellNumberButton.addEventListener('click', () => {
+cellNumberButton.addEventListener('click', (tempGridSize) => {
   while(true) {
-    squaresPerSide = Number(prompt('Enter the number of squares per side between 1 and 100.'));
+    tempGridSize = prompt('Enter the number of squares per side between 1 and 100.');
+
+    if (tempGridSize === null) {
+      break;
+    } else {
+      squaresPerSide = Number(tempGridSize);
+    }
 
     if (isNaN(squaresPerSide)) {
       alert('Please enter a valid number.');

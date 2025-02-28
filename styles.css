@@ -111,7 +111,7 @@ body {
   -webkit-text-stroke: 1.5px black;
   font-size: 3rem;
   background-color: var(--blue-400);
-  padding: 1rem;
+  padding: 0.75rem;
   border: var(--blue-800) solid 0.625rem;
 }
 
