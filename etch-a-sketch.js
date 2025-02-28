@@ -106,6 +106,9 @@ blackButton.addEventListener('click', () => {
   clearCells();
 })
 
+const clearButton = document.querySelector('.clear-grid');
+clearButton.addEventListener('click', clearCells);
+
 // Prompt to get the number of cells per side
 const cellNumberButton = document.querySelector('#grid-size-button');
 
