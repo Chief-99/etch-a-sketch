@@ -106,6 +106,11 @@ blackButton.addEventListener('click', () => {
   clearCells();
 })
 
+// Change button appearance based on which colour mode is active
+let blackFlag = true;
+let randomFlag;
+
+// Clear button 
 const clearButton = document.querySelector('.clear-grid');
 clearButton.addEventListener('click', clearCells);
 
