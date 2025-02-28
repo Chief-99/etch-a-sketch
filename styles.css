@@ -144,7 +144,11 @@ body {
   gap: 4rem;
 }
 
-.right-section, 
+.right-section {
+  flex-direction: column;
+  text-align: center;
+}
+ 
 .grid-size-container,
 .colour-container {
   display: flex;
