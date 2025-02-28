@@ -99,16 +99,31 @@ function cellEventListeners() {
 randomButton.addEventListener('click', () => {
   currentColour = 'random';
   clearCells();
+  randomFlag = true;
+  blackFlag = false;
+  activeColourMode();
 });
 
 blackButton.addEventListener('click', () => {
   currentColour = 'black';
   clearCells();
+  blackFlag = true;
+  randomFlag = false;
+  activeColourMode();
 })
 
 // Change button appearance based on which colour mode is active
 let blackFlag = true;
 let randomFlag;
+function activeColourMode() {
+  if (blackFlag == true) {
+    blackButton.style.backgroundColor = 'var(--active-purple)';
+    randomButton.style.backgroundColor = 'var(--blue-400)';
+  } else if (randomFlag == true) {
+    randomButton.style.backgroundColor = 'var(--active-purple)';
+    blackButton.style.backgroundColor = 'var(--blue-400)';
+  }
+}
 
 // Clear button 
 const clearButton = document.querySelector('.clear-grid');
@@ -141,3 +156,4 @@ cellNumberButton.addEventListener('click', (tempGridSize) => {
 
 
 createGrid();
+activeColourMode();
