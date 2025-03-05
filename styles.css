@@ -155,11 +155,10 @@ body {
   display: flex;
   flex-direction: column;
   text-align: center;
-  gap: 1rem;
+  gap: 2rem;
 }
 
 button {
-  margin-bottom: 1rem; /* ^ remember to remove this */
   color: var(--gold-500);
   background-color: var(--blue-400);
   border: black solid 3px;
