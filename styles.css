@@ -129,9 +129,9 @@ body {
 }
 
 #grid-container {
-  width: 45rem;
-  max-width: 45rem;
-  height: 45rem;
+  width: 35vw;
+  max-width: 35vw;
+  height: 35vw;
   border: 1px solid black;
   display: flex;
   flex-direction: column;
