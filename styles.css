@@ -81,7 +81,7 @@ select {
   --click-blue: #3C44DC;
   --gold-500: #efcb68;
   --active-purple: #68429D;
-  --hover-purple: #2B1050;
+  --hover-purple: #47207c;
 
   --fs-900: 4rem;
   --fs-700: 1.875rem;
@@ -182,6 +182,14 @@ button:active {
   background-color: var(--click-blue);
   translate: 0.5rem 0.5rem;
   box-shadow: none;
+}
+
+.active-colour-mode:hover {
+  background-color: var(--hover-purple) !important;
+}
+
+.inactive-colour-mode:hover {
+  background-color: var(--hover-blue) !important;
 }
 
 p, label {

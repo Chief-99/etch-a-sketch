@@ -119,12 +119,15 @@ function activeColourMode() {
   if (blackFlag == true) {
     blackButton.style.backgroundColor = 'var(--active-purple)';
     randomButton.style.backgroundColor = 'var(--blue-400)';
+    blackButton.classList.replace('inactive-colour-mode', 'active-colour-mode');
+    randomButton.classList.replace('active-colour-mode', 'inactive-colour-mode');
   } else if (randomFlag == true) {
     randomButton.style.backgroundColor = 'var(--active-purple)';
     blackButton.style.backgroundColor = 'var(--blue-400)';
+    randomButton.classList.replace('inactive-colour-mode', 'active-colour-mode');
+    blackButton.classList.replace('active-colour-mode', 'inactive-colour-mode');
   }
 }
-
 // Clear button 
 const clearButton = document.querySelector('.clear-grid');
 clearButton.addEventListener('click', clearCells);
